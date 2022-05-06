@@ -229,7 +229,7 @@ func deriveKey(dst, src *os.File) []byte {
 		salt     = make([]byte, 32)
 	)
 	if passwordFlag != "" {
-		password = []byte(passwordFlag)
+		password = []byte(base64.StdEncoding.DecodeString(passwordFlag))
 	} else if src == os.Stdin {
 		password = readPassword(os.Stderr)
 	} else {
