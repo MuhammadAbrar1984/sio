@@ -41,7 +41,7 @@ import (
 	"runtime"
 	"sort"
 	"syscall"
-
+ "encoding/base64"
 	"github.com/minio/sio"
 	"golang.org/x/crypto/scrypt"
 	"golang.org/x/crypto/ssh/terminal"
